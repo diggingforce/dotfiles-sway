@@ -1,0 +1,612 @@
+/* Global GTK Theme */
+
+@define-color theme_bg_color #191919;
+@define-color theme_fg_color #d9d7d6;
+@define-color theme_base_color #191919;
+@define-color theme_text_color #d9d7d6;
+@define-color theme_selected_bg_color #2e2e2e;
+@define-color theme_selected_fg_color #ffffff;
+@define-color theme_unfocused_selected_bg_color #252525;
+@define-color theme_unfocused_selected_fg_color #d9d7d6;
+@define-color borders #242424;
+@define-color unfocused_borders #1f1f1f;
+@define-color sidebar_bg_color #191919;
+@define-color menu_bg_color #191919;
+@define-color menu_fg_color #d9d7d6;
+@define-color menu_selected_bg_color #ffffff;
+@define-color menu_selected_fg_color #191919;
+@define-color popover_bg_color #191919;
+@define-color tooltip_bg_color #191919;
+@define-color tooltip_fg_color #d9d7d6;
+@define-color insensitive_bg_color #191919;
+@define-color insensitive_fg_color #777777;
+@define-color insensitive_base_color #191919;
+@define-color headerbar_bg_color #191919;
+@define-color headerbar_fg_color #d9d7d6;
+
+
+* {
+    border-radius: 0px;
+    -gtk-secondary-caret-color: #ffffff;
+}
+
+/* Base window */
+window,
+.background {
+    background-color: #191919;
+    color: #d9d7d6;
+}
+
+/* Popovers */
+window.popup,
+window.popover,
+window.background.popup,
+window.background.popover,
+window.csd.popup,
+popover,
+popover.background,
+popover.menu,
+.popover {
+    background-color: transparent;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+/* Menus */
+menu,
+.menu,
+.context-menu,
+popover > contents,
+popover contents,
+.popover > contents,
+.popover contents {
+    background-color: #191919;
+    color: #d9d7d6;
+    border: 1px solid #2e2e2e;
+    border-radius: 0px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+    padding: 4px 0;
+}
+
+popover > arrow,
+.popover > arrow {
+    background-color: #191919;
+    border-color: #2e2e2e;
+}
+
+/* Menu items */
+menuitem,
+.menuitem,
+modelbutton {
+    background-color: transparent;
+    color: #d9d7d6;
+    padding: 4px 12px;
+    border-radius: 0px;
+    min-height: 22px;
+}
+
+menuitem label,
+.menuitem label,
+menuitem > label,
+menuitem > box > label,
+modelbutton label,
+modelbutton > label,
+modelbutton > box > label {
+    color: #d9d7d6;
+}
+
+
+menu > menuitem:hover,
+menu > menuitem:selected,
+.menu > .menuitem:hover,
+.menu > .menuitem:selected,
+modelbutton:hover,
+modelbutton:selected,
+modelbutton:focus {
+    background-color: #ffffff;
+    color: #191919;
+    border-radius: 0px;
+}
+
+menu > menuitem:hover > label,
+menu > menuitem:selected > label,
+menu > menuitem:hover > box > label,
+menu > menuitem:selected > box > label,
+menu > menuitem:hover > box > image,
+menu > menuitem:selected > box > image,
+.menu > .menuitem:hover > label,
+.menu > .menuitem:selected > label,
+modelbutton:hover > label,
+modelbutton:selected > label,
+modelbutton:hover > box > label,
+modelbutton:selected > box > label {
+    color: #191919;
+}
+
+menuitem:disabled,
+menuitem:disabled > label,
+menuitem:disabled label,
+.menuitem:disabled,
+.menuitem:disabled label,
+modelbutton:disabled,
+modelbutton:disabled > label,
+modelbutton:disabled label {
+    color: #777777;
+    background-color: transparent;
+}
+
+menu separator,
+.menu separator {
+    border-bottom: 1px solid #282828;
+    margin: 3px 0;
+}
+
+menuitem accelerator,
+.menuitem accelerator {
+    color: #888888;
+}
+
+menu > menuitem:hover accelerator,
+menu > menuitem:selected accelerator {
+    color: #333333;
+}
+
+/* Headerbars */
+headerbar,
+.titlebar,
+titlebar,
+messagedialog .titlebar,
+dialog .titlebar,
+toolbar,
+.toolbar,
+menubar {
+    background-color: #191919;
+    background-image: none;
+    color: #d9d7d6;
+    border-bottom: 1px solid #242424;
+    box-shadow: none;
+    padding: 2px 4px;
+}
+
+menubar > menuitem {
+    background-color: transparent;
+    color: #d9d7d6;
+    padding: 4px 8px;
+    border-radius: 0px;
+}
+
+menubar > menuitem:hover,
+menubar > menuitem:selected {
+    background-color: #ffffff;
+    color: #191919;
+}
+
+menubar > menuitem:hover > label,
+menubar > menuitem:selected > label {
+    color: #191919;
+}
+
+/* Toolbar buttons */
+toolbar button,
+headerbar button,
+.path-bar-box button,
+button.flat {
+    background: transparent;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    color: #d9d7d6;
+    padding: 3px 6px;
+    margin: 1px 1px;
+    border-radius: 0px;
+}
+
+toolbar button:hover,
+headerbar button:hover,
+.path-bar-box button:hover,
+button.flat:hover {
+    background-color: #242424;
+    color: #ffffff;
+    border: none;
+    box-shadow: none;
+}
+
+toolbar button:checked,
+toolbar button:active,
+headerbar button:checked,
+headerbar button:active,
+button.flat:checked,
+button.flat:active {
+    background-color: #282828;
+    color: #ffffff;
+    border: none;
+    box-shadow: none;
+}
+
+/* Buttons */
+button {
+    background-color: #191919;
+    background-image: none;
+    color: #d9d7d6;
+    border: 1px solid #2e2e2e;
+    border-radius: 0px;
+    box-shadow: none;
+    padding: 3px 8px;
+}
+
+button:hover {
+    background-color: #242424;
+    background-image: none;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+button:checked,
+button:active {
+    background-color: #282828;
+    background-image: none;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+/* Entries */
+entry {
+    background-color: #191919;
+    color: #ffffff;
+    border: 1px solid #2e2e2e;
+    border-radius: 0px;
+    box-shadow: none;
+    min-height: 22px;
+    padding: 1px 6px;
+    margin: 2px 4px;
+}
+
+entry:focus {
+    border-color: #ffffff;
+    box-shadow: none;
+}
+
+/* Views */
+.view,
+view,
+treeview,
+iconview,
+list,
+row,
+scrolledwindow {
+    background-color: #191919;
+    color: #d9d7d6;
+    border: none;
+}
+
+/* Sidebar selection */
+.thunar .sidebar treeview:selected,
+.thunar .sidebar view:selected,
+.thunar .sidebar row:selected,
+.thunar .sidebar treeview:selected:focus,
+.thunar .sidebar view:selected:focus,
+.thunar .sidebar treeview:selected:hover,
+.thunar .sidebar view:selected:hover,
+.thunar .sidebar row:selected:hover,
+.thunar .sidebar treeview:hover:selected,
+.thunar .sidebar view:hover:selected,
+.thunar .sidebar row:hover:selected,
+.thunar treeview.sidebar:selected,
+.thunar treeview.sidebar:selected:hover,
+.thunar treeview.sidebar:hover:selected,
+.thunar .shortcuts-view:selected,
+.thunar .shortcuts-view:selected:hover,
+.thunar .shortcuts-view:hover:selected {
+    background-color: #ffffff;
+    color: #191919;
+    border-radius: 0px;
+}
+
+.thunar .sidebar treeview:selected:backdrop,
+.thunar .sidebar view:selected:backdrop,
+.thunar .sidebar row:selected:backdrop,
+.thunar .sidebar treeview:backdrop:selected,
+.thunar .sidebar view:backdrop:selected {
+    background-color: #282828;
+    color: #ffffff;
+    border-radius: 0px;
+}
+
+/* Places sidebar */
+placessidebar,
+placessidebar.sidebar,
+placessidebar > viewport.frame,
+placesview {
+    background-color: #191919;
+    color: #d9d7d6;
+}
+
+placessidebar list,
+placessidebar row,
+placessidebar .sidebar-row {
+    background-color: transparent;
+    color: #d9d7d6;
+}
+
+placessidebar row:hover,
+placessidebar row.sidebar-row:hover,
+placessidebar list row:hover,
+placessidebar list row.sidebar-row:hover {
+    background-color: #222222;
+    color: #ffffff;
+}
+placessidebar row:hover label,
+placessidebar row:hover image,
+placessidebar row.sidebar-row:hover label,
+placessidebar row.sidebar-row:hover image {
+    color: #ffffff;
+}
+
+placessidebar row:selected,
+placessidebar row:selected:focus,
+placessidebar row:selected:hover,
+placessidebar row:hover:selected,
+placessidebar row.sidebar-row:selected,
+placessidebar row.sidebar-row:selected:focus,
+placessidebar row.sidebar-row:selected:hover,
+placessidebar row.sidebar-row:hover:selected,
+placessidebar list row:selected,
+placessidebar list row:selected:focus,
+placessidebar list row:selected:hover,
+placessidebar list row:hover:selected,
+placessidebar list row.sidebar-row:selected,
+placessidebar list row.sidebar-row:selected:focus,
+placessidebar list row.sidebar-row:selected:hover,
+placessidebar list row.sidebar-row:hover:selected {
+    background-color: #ffffff;
+    color: #191919;
+}
+
+placessidebar row:selected label,
+placessidebar row:selected image,
+placessidebar row:selected:focus label,
+placessidebar row:selected:focus image,
+placessidebar row:selected:hover label,
+placessidebar row:selected:hover image,
+placessidebar row:hover:selected label,
+placessidebar row:hover:selected image,
+placessidebar row.sidebar-row:selected label,
+placessidebar row.sidebar-row:selected image,
+placessidebar row.sidebar-row:selected:focus label,
+placessidebar row.sidebar-row:selected:focus image,
+placessidebar row.sidebar-row:selected:hover label,
+placessidebar row.sidebar-row:selected:hover image,
+placessidebar row.sidebar-row:hover:selected label,
+placessidebar row.sidebar-row:hover:selected image,
+placessidebar list row:selected label,
+placessidebar list row:selected image,
+placessidebar list row:selected:focus label,
+placessidebar list row:selected:focus image,
+placessidebar list row:selected:hover label,
+placessidebar list row:selected:hover image,
+placessidebar list row:hover:selected label,
+placessidebar list row:hover:selected image {
+    color: #191919;
+}
+
+
+/* File view */
+.thunar .standard-view .view,
+.thunar .standard-view .view:backdrop,
+.thunar .standard-view view,
+.thunar .standard-view view:backdrop,
+.thunar .standard-view iconview,
+.thunar .standard-view iconview:backdrop,
+.standard-view .view,
+.standard-view .view:backdrop,
+.standard-view view,
+.standard-view view:backdrop,
+.standard-view iconview,
+.standard-view iconview:backdrop {
+    background-color: #191919;
+    color: #d9d7d6;
+    border-radius: 0px;
+}
+
+
+.thunar .standard-view .view:active,
+.thunar .standard-view iconview:active {
+    background-color: #ffffff;
+    color: #d9d7d6;
+}
+
+.thunar .standard-view .view:selected,
+.thunar .standard-view .view:selected:focus,
+.thunar .standard-view iconview:selected,
+.thunar .standard-view iconview:selected:focus {
+    background-color: #ffffff;
+    color: #ffffff;
+    border-radius: 0px;
+    -gtk-icon-effect: none;
+    -gtk-icon-palette: default;
+    -gtk-icon-shadow: none;
+    -gtk-icon-transform: none;
+}
+
+.thunar .standard-view .view:selected:backdrop,
+.thunar .standard-view .view:backdrop:selected,
+.thunar .standard-view iconview:selected:backdrop,
+.thunar .standard-view iconview:backdrop:selected {
+    color: #d9d7d6;
+    border-radius: 0px;
+    -gtk-icon-effect: none;
+    -gtk-icon-palette: default;
+}
+
+/* Treeviews */
+treeview:selected,
+treeview:selected:focus,
+treeview:selected:hover,
+treeview:hover:selected,
+list row:selected,
+list row:selected:focus,
+list row:selected:hover,
+list row:hover:selected,
+row:selected,
+row:selected:hover,
+row:hover:selected {
+    background-color: #ffffff;
+    color: #191919;
+    border-radius: 0px;
+}
+
+treeview:selected:backdrop,
+treeview:backdrop:selected,
+list row:selected:backdrop,
+list row:backdrop:selected {
+    background-color: #282828;
+    color: #ffffff;
+    border-radius: 0px;
+}
+
+treeview:hover,
+iconview:hover,
+list row:hover,
+row:hover {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+/* Layout */
+window.thunar,
+.thunar,
+.thunar grid,
+.thunar box,
+.thunar paned {
+    background-color: #191919;
+    color: #d9d7d6;
+}
+
+.thunar .sidebar,
+.thunar .sidebar view,
+.thunar .sidebar treeview,
+.thunar .shortcuts-view,
+.thunar treeview.sidebar {
+    background-color: #191919;
+    color: #d9d7d6;
+    border-right: 1px solid #242424;
+}
+
+.thunar statusbar,
+.thunar statusbar frame {
+    background-color: #191919;
+    color: #888888;
+    border-top: 1px solid #242424;
+}
+
+/* Scrollbars */
+scrollbar {
+    background-color: transparent;
+}
+
+scrollbar slider {
+    background-color: #2e2e2e;
+    border-radius: 0px;
+    min-width: 5px;
+    min-height: 5px;
+}
+
+scrollbar slider:hover {
+    background-color: #444444;
+}
+
+/* Tooltips & Dialogs */
+tooltip {
+    background-color: #191919;
+    color: #ffffff;
+    border: 1px solid #333333;
+    border-radius: 0px;
+    padding: 4px 8px;
+}
+
+dialog,
+messagedialog,
+dialog.background,
+messagedialog.background,
+messagedialog .titlebar,
+dialog .titlebar,
+messagedialog .dialog-action-area,
+dialog .dialog-action-area,
+.dialog-action-box,
+.dialog-vbox {
+    background-color: #191919;
+    background-image: none;
+    color: #d9d7d6;
+    border-radius: 0px;
+}
+
+messagedialog .dialog-action-area button,
+dialog .dialog-action-area button,
+.dialog-action-box button {
+    background-color: #191919;
+    background-image: none;
+    color: #d9d7d6;
+    border: 1px solid #2e2e2e;
+    border-radius: 0px;
+}
+
+messagedialog .dialog-action-area button:hover,
+dialog .dialog-action-area button:hover,
+.dialog-action-box button:hover {
+    background-color: #242424;
+    background-image: none;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+messagedialog .dialog-action-area button:active,
+messagedialog .dialog-action-area button:checked,
+dialog .dialog-action-area button:active,
+dialog .dialog-action-area button:checked {
+    background-color: #282828;
+    background-image: none;
+    color: #ffffff;
+}
+
+/* Rubberband */
+rubberband,
+.rubberband,
+flowbox rubberband,
+flowbox.rubberband,
+flowbox .rubberband,
+treeview.view rubberband,
+treeview.view.rubberband,
+treeview.view .rubberband,
+.content-view rubberband,
+.content-view.rubberband,
+.content-view .rubberband,
+.view rubberband,
+.view.rubberband,
+.view .rubberband,
+view rubberband,
+view.rubberband,
+view .rubberband,
+iconview rubberband,
+iconview.rubberband,
+iconview .rubberband,
+.standard-view rubberband,
+.standard-view.rubberband,
+.standard-view .rubberband,
+.standard-view view.rubberband,
+.standard-view .view.rubberband,
+.standard-view iconview.rubberband,
+.thunar rubberband,
+.thunar .rubberband,
+.thunar view.rubberband,
+.thunar .view.rubberband,
+.thunar iconview.rubberband,
+.thunar .standard-view view.rubberband,
+.thunar .standard-view .view.rubberband,
+.thunar .standard-view iconview.rubberband {
+    background-color: rgba(255, 255, 255, 0.22);
+    border: none;
+    border-radius: 0px;
+}
+
