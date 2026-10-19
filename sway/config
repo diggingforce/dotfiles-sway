@@ -57,6 +57,8 @@ bindsym $super+m exit
 # Floating rules
 for_window [app_id="nmtui"] floating enable, resize set 650 450
 for_window [app_id="pavucontrol"] floating enable, resize set 700 500
+for_window [app_id="^chrome-.*-Default$"] floating enable
+for_window [title="^Bitwarden$"] floating enable
 
 # Screenshots & Recording
 bindsym $super+s exec ~/.config/sway/scripts/screenshot.sh
